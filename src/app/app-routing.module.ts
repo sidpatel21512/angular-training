@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'directives',
     loadChildren: () => import('./directive-types/directive-types.module').then(m => m.DirectiveTypesModule)
+  },
+  {
+    path: 'forms',
+    loadChildren: () => import('./form-types/form-types.module').then(m => m.FormTypesModule)
   }
 ];
 
