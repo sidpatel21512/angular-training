@@ -1,5 +1,4 @@
-https://stackblitz.com/edit/angular-template-driven-forms-example?file=src%2Fapp%2Fapp.component.ts
-https://stackblitz.com/edit/template-driven-forms-and-validation-in-angular?file=src%2Fapp%2Fapp.component.html
+<!-- https://stackblitz.com/edit/template-driven-forms-and-validation-in-angular?file=src%2Fapp%2Fapp.component.html -->
 
 <div>
   <form (ngSubmit)="onSubmit(formdemo, userData)" #formdemo="ngForm">
@@ -18,13 +17,12 @@ https://stackblitz.com/edit/template-driven-forms-and-validation-in-angular?file
         <label for="email">Mail</label>
         <input
           type="email"
-          id="email"
+          id="emailId"
           class="form-control"
           [(ngModel)]="userData.email"
           name="email"
-          required
-          #email="ngModel">
-        <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+          required>
+        <span class="help-block" *ngIf="!formdemo.controls['email']?.valid && formdemo.controls['email']?.touched">Please enter a valid email!</span>
       </div>
 
     <button

@@ -1,0 +1,14 @@
+<!-- https://stackblitz.com/edit/angular-8-reactive-form-validation?file=app%2Fapp.component.html -->
+
+<div>
+  <form [formGroup]="registerForm" (submit)="onSubmit()" >
+    <div>
+      <label>First Name</label>
+      <input type="text" formControlName="firstName" />
+      <div *ngIf="registerForm.touched && f['firstName'].errors">
+        <div *ngIf="f['firstName'].errors['minlength']">First Name must be at least 6 characters</div>
+        <div *ngIf="f['firstName'].errors['required']">First Name is required</div>
+      </div>
+  </div>
+  </form>
+</div>

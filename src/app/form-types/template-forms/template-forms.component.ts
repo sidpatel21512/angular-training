@@ -16,11 +16,11 @@ export class TemplateFormsComponent {
   submitted = false;
 
   onSubmit(form: any, formData: any) {
-    console.log('submitted formdata', formData);
+    console.log('submitted formdata', form);
 
     alert('Form submitted successfully');
 
-    form.reset();
+    // form.reset();
   }
 
 }

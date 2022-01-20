@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
 
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
     component: TemplateFormsComponent
   }, {
     path: 'reactive',
-    component: TemplateFormsComponent
+    component: ReactiveFormsComponent
   }, {
     path: 'dynamic',
     component: TemplateFormsComponent
@@ -23,7 +24,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    TemplateFormsComponent
+    TemplateFormsComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     CommonModule,
