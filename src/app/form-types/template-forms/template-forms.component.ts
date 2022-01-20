@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-template-forms',
   templateUrl: './template-forms.component.html',
   styleUrls: ['./template-forms.component.scss']
 })
-export class TemplateFormsComponent implements OnInit {
+export class TemplateFormsComponent {
 
-  constructor() { }
+  userData = {
+    username: '',
+    email: '',
+    country: '',
+    gender: ''
+  };
+  submitted = false;
 
-  ngOnInit(): void {
+  onSubmit(form: any, formData: any) {
+    console.log('submitted formdata', formData);
+
+    alert('Form submitted successfully');
+
+    form.reset();
   }
 
 }
