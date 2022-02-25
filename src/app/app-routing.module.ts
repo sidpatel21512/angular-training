@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'forms',
     loadChildren: () => import('./form-types/form-types.module').then(m => m.FormTypesModule)
   },
+  {
+    path: 'nesting-routes',
+    loadChildren: () => import('./nesting-routes/nesting-routes.module').then(m => m.NestingRoutesModule)
+  }
   // {path: '', redirectTo: '/hooks', pathMatch: 'full'},
   // {
   //   path: '**',
