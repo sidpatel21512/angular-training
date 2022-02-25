@@ -13,7 +13,12 @@ const routes: Routes = [
   {
     path: 'forms',
     loadChildren: () => import('./form-types/form-types.module').then(m => m.FormTypesModule)
-  }
+  },
+  // {path: '', redirectTo: '/hooks', pathMatch: 'full'},
+  // {
+  //   path: '**',
+  //   component: PageNotFoundComponent
+  // }
 ];
 
 @NgModule({
