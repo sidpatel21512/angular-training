@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'nesting-routes',
     loadChildren: () => import('./nesting-routes/nesting-routes.module').then(m => m.NestingRoutesModule)
+  },
+  {
+    path: 'preloadcomponentdata',
+    loadChildren: () => import('./preload-component-data/preload-component-data.module').then(m => m.PreloadComponentDataModule)
   }
   // {path: '', redirectTo: '/hooks', pathMatch: 'full'},
   // {
