@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CanActivateGuard } from './services/can-activate.guard';
 
 const routes: Routes = [
   {
@@ -21,6 +22,12 @@ const routes: Routes = [
   {
     path: 'preloadcomponentdata',
     loadChildren: () => import('./preload-component-data/preload-component-data.module').then(m => m.PreloadComponentDataModule)
+  },
+  {
+    path: 'guards',
+    loadChildren: () => import('./guards/guards.module').then(m => m.GuardsModule),
+    canActivate: [CanActivateGuard],
+    // canLoad: [CanLoadGuard]
   }
   // {path: '', redirectTo: '/hooks', pathMatch: 'full'},
   // {

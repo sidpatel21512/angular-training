@@ -1,3 +1,6 @@
+# cli commands
+- ng generate module customers --route customers --module app.module
+
 # AngularTraining
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
