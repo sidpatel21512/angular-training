@@ -1,5 +1,5 @@
 <p>after-content-init works!</p>
 <app-init-child>
-  <p>Example for AfterContentInit</p>
-  <p *ngIf="isVisible">Example for AfterContentChecked</p>
+  <p #firstcontent>Example for AfterContentInit</p>
+  <p *ngIf="isVisible" #seccontent>Example for AfterContentChecked</p>
 </app-init-child>
