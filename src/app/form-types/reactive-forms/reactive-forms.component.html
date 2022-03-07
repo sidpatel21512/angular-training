@@ -8,6 +8,7 @@
       <div *ngIf="registerForm.touched && f['firstName'].errors">
         <div *ngIf="f['firstName'].errors['minlength']">First Name must be at least 6 characters</div>
         <div *ngIf="f['firstName'].errors['required']">First Name is required</div>
+        <div *ngIf="f['firstName'].errors['custom']">First character should be capital</div>
       </div>
   </div>
   </form>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -12,7 +12,7 @@ export class ReactiveFormsComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     this.registerForm = new FormGroup(
       {
-        firstName: new FormControl('', [Validators.required, Validators.minLength(6)]),
+        firstName: new FormControl('', [Validators.required, Validators.minLength(6), this.customValidator()]),
       }
     );
 
@@ -40,6 +40,12 @@ export class ReactiveFormsComponent implements OnInit {
 
     // display form values on success
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+}
+
+ customValidator(): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    return control.value && control.value[0] != control.value[0].toUpperCase() ? {custom: true} : null;
+  };
 }
 
 }
