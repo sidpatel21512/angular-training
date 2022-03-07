@@ -21,7 +21,8 @@
           class="form-control"
           [(ngModel)]="userData.email"
           name="email"
-          required>
+          required
+          email>
         <span class="help-block" *ngIf="!formdemo.controls['email']?.valid && formdemo.controls['email']?.touched">Please enter a valid email!</span>
       </div>
 
