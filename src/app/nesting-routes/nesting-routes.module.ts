@@ -13,11 +13,11 @@ const routes:Routes = [
     canActivateChild: [CanActivateChildGuard],
     children: [
       {
-        path: 'child-a', // child route path
+        path: 'child-a/:id', // child route path
         component: ChildAComponent, // child route component that the router renders
       },
       {
-        path: 'child-b',
+        path: 'child-b/:id',
         component: ChildBComponent, // another child route component that the router renders
       },
     ]

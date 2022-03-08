@@ -16,7 +16,7 @@ export class ParentComponent implements OnInit {
 
   // Relative route example
   goToOtherRoute() {
-    const path = this.isFirst ? 'child-a' : 'child-b';
+    const path = this.isFirst ? 'child-a/3' : 'child-b/4';
     this.isFirst = !this.isFirst;
     this.router.navigate([path], {relativeTo: this.route});
   }
